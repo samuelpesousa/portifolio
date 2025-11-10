@@ -2,8 +2,26 @@ import React from 'react'
 import Button from '../components/Button.jsx'
 import { words } from '../constanst/index.js'
 import HeroExperience from '../components/HeroModels/HeroExperience.jsx'
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
+import AnimatedCounter from '../components/AnimatedCounter.jsx'
 
 const Hero = () => {
+    useGSAP(() => {
+        gsap.fromTo('.hero-text h1',
+        {
+            y: 50,
+            opacity: 0, 
+        },
+        {
+            y: 0,
+            opacity: 1,
+            stagger: 0.2,
+            duration: 1,
+            ease: 'power1.inOut'
+        },
+        )
+    })
     return(
       <session id="hero" className="relative overflow-hidden">
         <div className="absolute top-0 left-0 z-10">
@@ -40,6 +58,7 @@ const Hero = () => {
                 </div>
             </figure>
         </div>
+        <AnimatedCounter />
       </session>
     )
 }
