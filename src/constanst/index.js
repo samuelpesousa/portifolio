@@ -9,3 +9,10 @@ export const words  = [
     { text: 'Código', imgPath: '/images/code.svg' },
     
 ];
+
+export const CounterItems = [
+    {value: 5, suffix: '+', label: 'Anos de Experiência'},
+    {value: 40, suffix: '+', label: 'Clientes Satisfeitos'},
+    {value: 100, suffix: '%', label: 'Projetos Entregues'},
+    {value: 98, suffix: '%', label: 'Satisfação de Clientes'},
+];
