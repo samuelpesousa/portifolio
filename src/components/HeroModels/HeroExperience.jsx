@@ -1,53 +1,43 @@
-import { OrbitControls } from '@react-three/drei'
-import { Canvas } from '@react-three/fiber'
-import { useMediaQuery } from 'react-responsive';
-import { Room } from './Room';
-import HeroLights from './HeroLights'
+import { OrbitControls } from "@react-three/drei";
+import { Canvas } from "@react-three/fiber";
+import { useMediaQuery } from "react-responsive";
+
+import { Room } from "./Room";
+import HeroLights from "./HeroLights";
 import Particles from "./Particles";
+import { Suspense } from "react";
 
 const HeroExperience = () => {
-    const isTable = useMediaQuery({query: '(max-width: 1024px)'});
-    const isMobile = useMediaQuery({query: '(max-width: 768px)'});
-    
-    const cameraPosition = isMobile ? [3, 1, 3] : isTable ? [6, 1.5, 6] : [8, 2, 8];
-    const cameraFov = isMobile ? 75 : isTable ? 55 : 45;
-    
-    return(
- 
-       <Canvas
-        camera={{
-            position: cameraPosition,
-            fov: cameraFov,
-            near: 0.1,
-            far: 1000
-        }}
-        style={{ background: 'transparent' }}
-        gl={{ antialias: true, alpha: true }}
-       >
+  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
+  const isTablet = useMediaQuery({ query: "(max-width: 1024px)" });
 
+  return (
+    <Canvas camera={{ position: [0, 0, 15], fov: 45 }}>
+      {/* deep blue ambient */}
+      <ambientLight intensity={0.2} color="#1a1a40" />
+      {/* Configure OrbitControls to disable panning and control zoom based on device type */}
+      <OrbitControls
+        enablePan={false} // Prevents panning of the scene
+        enableZoom={!isTablet} // Disables zoom on tablets
+        maxDistance={20} // Maximum distance for zooming out
+        minDistance={5} // Minimum distance for zooming in
+        minPolarAngle={Math.PI / 5} // Minimum angle for vertical rotation
+        maxPolarAngle={Math.PI / 2} // Maximum angle for vertical rotation
+      />
+
+      <Suspense fallback={null}>
         <HeroLights />
-
-        <OrbitControls 
-        enablePan={false} 
-        enableZoom={!isMobile && !isTable}
-        enableRotate={!isMobile}
-        maxDistance={20}
-        minDistance={5}
-        minPolarAngle={Math.PI / 5}
-        maxPolarAngle={Math.PI / 2}
-        target={[0, 0, 0]}
-        />
-
-        <Particles count={isMobile ? 50 : 100} />
-        <group 
-            scale={isMobile ? 0.35 : isTable ? 0.6 : 1}
-            position={isMobile ? [0, -1, 0] : isTable ? [0, -1.5, 0] : [0, -2, 0]}
-            rotation={[0, isMobile ? -Math.PI / 4 : -Math.PI / 6, 0]}
+        <Particles count={100} />
+        <group
+          scale={isMobile ? 0.7 : 1}
+          position={[0, -3.5, 0]}
+          rotation={[0, -Math.PI / 4, 0]}
         >
-            <Room />
+          <Room />
         </group>
+      </Suspense>
+    </Canvas>
+  );
+};
 
-       </Canvas>
-    )
-}
-export default HeroExperience
+export default HeroExperience;
