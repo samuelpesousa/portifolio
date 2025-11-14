@@ -44,7 +44,7 @@ useGSAP(() =>{
 }, []);
 
     return (
-        <session id="work" ref={sectionRef} className="app-showcase">
+        <section id="work" ref={sectionRef} className="app-showcase">
             <div className="w-full">
                 <div className="showcaselayout">
                     <div className="first-project-wrapper" ref={project1Ref}>
@@ -75,7 +75,7 @@ useGSAP(() =>{
                     </div> 
                 </div>
             </div>
-        </session>
+        </section>
     )
 
 }
