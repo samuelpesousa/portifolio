@@ -10,7 +10,7 @@
 
 ### 💼 Portfólio moderno com experiências 3D interativas
 
-[Demo ao Vivo](https://samuelpesousa.github.io/portifolio) • [Reportar Bug](https://github.com/samuelpesousa/portifolio/issues) • [Solicitar Feature](https://github.com/samuelpesousa/portifolio/issues)
+[Demo ao Vivo](https://portifolio-rho-ivory.vercel.app/) • [Reportar Bug](https://github.com/samuelpesousa/portifolio/issues) • [Solicitar Feature](https://github.com/samuelpesousa/portifolio/issues)
 
 </div>
 
