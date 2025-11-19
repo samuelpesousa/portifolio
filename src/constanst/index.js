@@ -259,18 +259,22 @@ export const testimonials = [
 export const socialImgs = [
   {
     name: "insta",
+    url: "instagram.com/samuelpesousa",
     imgPath: "/images/insta.png",
   },
   {
     name: "fb",
+    url: "facebook.com",
     imgPath: "/images/fb.png",
   },
   {
     name: "x",
+    url: "x.com",
     imgPath: "/images/x.png",
   },
   {
     name: "linkedin",
+    url: "www.linkedin.com/in/samuel-de-paula-sousa",
     imgPath: "/images/linkedin.png",
   },
 ];
