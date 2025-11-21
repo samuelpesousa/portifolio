@@ -29,10 +29,6 @@ export const navLinks = [
     {
         name: "Habilidades", 
         link: "#skills",
-    },
-    {
-        name: "Feedbacks",
-        link: "#testimonials",
     }
 ];
 

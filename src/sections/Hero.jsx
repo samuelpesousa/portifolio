@@ -47,7 +47,7 @@ const Hero = () => {
                         <h1>Em Projetos Reais</h1>
                         <h1>Que Entregam Resultados.</h1>
                     </div>
-                     <p className='text-white-50 md:text-xl relative z-10'>Olá, sou Samuel um desenvolvedor Front-end apaixonado em tecnologia e programação.</p>
+                     <p className='text-white-50 md:text-xl relative z-10'>Olá, sou Samuel um desenvolvedor apaixonado em tecnologia e programação.</p>
                     <Button className="md:w-80 md:h-16 w-72 h-14" id="button" text="Veja meu trabalho" />
                 </div>
             </header>
