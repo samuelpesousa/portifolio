@@ -31,7 +31,7 @@ const Hero = () => {
         <div className='hero-layout'>
             <header className='flex flex-col justify-center md:w-full w-screen md:px-20 px-5'>
                 <div className='flex flex-col gap-7'>
-                    <div className='hero-text'>
+                    <div className='hero-text relative z-20'>
                         <h1>Moldando 
                             <span  className='slide'>
                                 <span className='wrapper'>
@@ -48,7 +48,7 @@ const Hero = () => {
                         <h1>Que Entregam Resultados.</h1>
                     </div>
                      <p className='text-white-50 md:text-xl relative z-10'>Olá, sou Samuel um desenvolvedor Front-end apaixonado em tecnologia e programação.</p>
-                    <Button className="md:w-80 md:16 w-60 h-12" id="button" text="Veja meu trabalho" />
+                    <Button className="md:w-80 md:h-16 w-72 h-14" id="button" text="Veja meu trabalho" />
                 </div>
             </header>
 
