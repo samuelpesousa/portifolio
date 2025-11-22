@@ -9,11 +9,15 @@ const AnimatedCounter = () => {
            <div className="mx-auto grid-4-cols">
             {CounterItems.map((item) => (
 
-            <div className="bg-zinc-900 rounded-lg flex p-10 flex-col justify-center">
-                <div key={item.label} className="counter-number text-white text-5xl font-bold mb-2">
+            <div className="rounded-lg flex p-10 flex-col justify-center" style={{
+                backgroundColor: 'var(--card-bg)',
+                border: '1px solid var(--card-border)',
+                boxShadow: 'var(--shadow-sm)'
+            }}>
+                <div key={item.label} className="counter-number text-5xl font-bold mb-2" style={{ color: 'var(--text-main)' }}>
                     
                     <CountUp suffix={item.suffix} end={item.value}/>
-                    <div className="text-white-50 text-lg font-normal">{item.label}</div>
+                    <div className="text-lg font-normal" style={{ color: 'var(--text-muted)' }}>{item.label}</div>
                 </div>
             </div>
             ))}

@@ -1,12 +1,12 @@
 export const words  = [
-    { text: 'Ideais', imgPath: '/images/ideas.svg' },
-    { text: 'Conceitos', imgPath: '/images/concepts.svg' },
-    { text: 'Designs', imgPath: '/images/designs.svg' },
-    { text: 'Código', imgPath: '/images/code.svg' },
-    { text: 'Ideais', imgPath: '/images/ideas.svg' },
-    { text: 'Conceitos', imgPath: '/images/concepts.svg' },
-    { text: 'Designs', imgPath: '/images/designs.svg' },
-    { text: 'Código', imgPath: '/images/code.svg' },
+    { id: 1, text: 'Ideais', imgPath: '/images/ideas.svg' },
+    { id: 2, text: 'Conceitos', imgPath: '/images/concepts.svg' },
+    { id: 3, text: 'Designs', imgPath: '/images/designs.svg' },
+    { id: 4, text: 'Código', imgPath: '/images/code.svg' },
+    { id: 5, text: 'Ideais', imgPath: '/images/ideas.svg' },
+    { id: 6, text: 'Conceitos', imgPath: '/images/concepts.svg' },
+    { id: 7, text: 'Designs', imgPath: '/images/designs.svg' },
+    { id: 8, text: 'Código', imgPath: '/images/code.svg' },
     
 ];
 
@@ -262,11 +262,6 @@ export const socialImgs = [
     name: "fb",
     url: "facebook.com",
     imgPath: "/images/fb.png",
-  },
-  {
-    name: "x",
-    url: "x.com",
-    imgPath: "/images/x.png",
   },
   {
     name: "linkedin",
