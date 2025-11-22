@@ -9,6 +9,9 @@ import { EffectComposer, SelectiveBloom } from "@react-three/postprocessing";
 import { BlendFunction } from "postprocessing";
 import * as THREE from "three";
 
+// Preload do modelo mais importante para carregamento rápido
+useGLTF.preload('/models/optimized-room.glb');
+
 export function Room(props) {
   const { nodes, materials } = useGLTF("/models/optimized-room.glb");
   const screensRef = useRef();
