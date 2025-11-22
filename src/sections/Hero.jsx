@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { Suspense, lazy } from 'react'
 import Button from '../components/Button.jsx'
 import { words } from '../constanst/index.js'
-import HeroExperience from '../components/HeroModels/HeroExperience.jsx'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import AnimatedCounter from '../components/AnimatedCounter.jsx'
+
+const HeroExperience = lazy(() => import('../components/HeroModels/HeroExperience.jsx'))
 
 const Hero = () => {
     useGSAP(() => {
@@ -36,8 +37,8 @@ const Hero = () => {
                             <span  className='slide'>
                                 <span className='wrapper'>
                                     {words.map((word) => (
-                                        <span key={word.text} className='flex items-center md:gap-3 gap-1 pb-2' > 
-                                            <img src={word.imgPath} alt={word.text} className='xl:size-12 md:size-10 size-7 md:p-2 p-1 rounded-full bg-white-50' />
+                                        <span key={word.id} className='flex items-center md:gap-3 gap-1 pb-2' > 
+                                            <img src={word.imgPath} alt={word.text} className='xl:size-12 md:size-10 size-7 md:p-2 p-1 rounded-full bg-white' />
                                             <span>{word.text}</span>
                                         </span>
                                     ))}
@@ -47,14 +48,16 @@ const Hero = () => {
                         <h1>Em Projetos Reais</h1>
                         <h1>Que Entregam Resultados.</h1>
                     </div>
-                     <p className='text-white-50 md:text-xl relative z-10'>Olá, sou Samuel um desenvolvedor apaixonado em tecnologia e programação.</p>
+                     <p className='md:text-xl relative z-10' style={{ color: 'var(--text-muted)' }}>Olá, sou Samuel um desenvolvedor apaixonado em tecnologia e programação.</p>
                     <Button className="md:w-80 md:h-16 w-72 h-14" id="button" text="Veja meu trabalho" />
                 </div>
             </header>
 
             <figure>
                 <div className='hero-3d-layout'>
-                <HeroExperience />
+                <Suspense fallback={<div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%', color: 'var(--text-muted)' }}>Carregando 3D...</div>}>
+                  <HeroExperience />
+                </Suspense>
                 </div>
             </figure>
         </div>

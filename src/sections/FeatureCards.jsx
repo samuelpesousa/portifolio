@@ -14,9 +14,9 @@ const FeatureCards = () => {
                         <img src={imgPath} alt={title}/>
                     </div>  
                     
-                    <h3 className='text-white text-2xl font-semibold mt-2'>{title}</h3>
-                    
-                    <p className='text-white-50 text-lg'>{desc}</p>
+                    <h3 className='text-2xl font-semibold mt-2' style={{ color: 'var(--text-main)' }}>{title}</h3>
+
+                    <p className='text-lg' style={{ color: 'var(--text-muted)' }}>{desc}</p>
                     </div>
                 ))}
             </div>

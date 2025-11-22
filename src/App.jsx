@@ -8,6 +8,7 @@ import ExperienceSection from './sections/ExperienceSection.jsx'
 import TechStack from './sections/TechStack.jsx'
 import Contact from './sections/Contact.jsx'
 import Footer from './sections/Footer.jsx'
+import ThemeToggle from './components/ThemeToggle.jsx'
 
 const App = () => {
     return(
@@ -21,6 +22,7 @@ const App = () => {
         <TechStack />
         <Contact />
         <Footer />
+        <ThemeToggle />
       </>
     )
 }

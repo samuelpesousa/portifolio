@@ -75,14 +75,14 @@ const ExperienceSection = () => {
                                             </div>
 
                                             <div className="">
-                                                <h1 className="font-semibold text-3xl">{card.title}</h1>
-                                                <p className="my-5 text-white-50">
+                                                <h1 className="font-semibold text-3xl" style={{ color: 'var(--text-main)' }}>{card.title}</h1>
+                                                <p className="my-5" style={{ color: 'var(--text-muted)' }}>
                                                     {card.date}
                                                 </p>
-                                                <p className="text-[#839cb5] italic">
+                                                <p className="italic" style={{ color: 'var(--text-muted)' }}>
                                                     Responsabilidades
                                                 </p>
-                                                <ul className="list-disc ms-5 mt-5 flex flex-col gap-5 text-white-50">
+                                                <ul className="list-disc ms-5 mt-5 flex flex-col gap-5" style={{ color: 'var(--text-muted)' }}>
                                                     {card.responsibilities.map((responsibility) => (
                                                         <li key={responsibility}>
                                                             {responsibility}

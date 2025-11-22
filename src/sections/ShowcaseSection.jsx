@@ -53,7 +53,7 @@ useGSAP(() =>{
                         </div>
                         <div className="text-content">
                             <h2>Aplicativo para Concessionária e Aluguel de Veículos</h2>
-                            <p className="text-white-50 md:text-xl">Um aplicativo com design moderno, pensado para atender todos os tipos de pessoas com facilidade. Construído com linguagens mais recentes do mercado (React Native) e métodos de Design inovadores, garantindo a maior durabilidade da aplicação e segurança.</p>
+                            <p className="md:text-xl" style={{ color: 'var(--text-muted)' }}>Um aplicativo com design moderno, pensado para atender todos os tipos de pessoas com facilidade. Construído com linguagens mais recentes do mercado (React Native) e métodos de Design inovadores, garantindo a maior durabilidade da aplicação e segurança.</p>
                         </div>
                     </div>
                     <div className="project-list-wrapper overflow-hidden">
