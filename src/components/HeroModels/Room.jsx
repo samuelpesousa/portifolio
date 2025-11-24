@@ -17,16 +17,21 @@ export function Room(props) {
   const screensRef = useRef();
   const matcapTexture = useTexture("/images/textures/mat1.png");
 
+  // Detecta se está no tema claro
+  const isLightMode = !document.documentElement.classList.contains('dark');
+
+  // Cores adaptadas para tema claro (tons mais suaves e claros)
   const curtainMaterial = new THREE.MeshPhongMaterial({
-    color: "#d90429",
+    color: isLightMode ? "#5e94c4" : "#d90429", // Azul suave no claro, vermelho no escuro
   });
 
   const bodyMaterial = new THREE.MeshPhongMaterial({
     map: matcapTexture,
+    color: isLightMode ? "#e8f0f7" : "#ffffff", // Mais claro no tema claro
   });
 
   const tableMaterial = new THREE.MeshPhongMaterial({
-    color: "#582f0e",
+    color: isLightMode ? "#b8a88a" : "#582f0e", // Madeira clara no claro, escura no escuro
   });
 
   const radiatorMaterial = new THREE.MeshPhongMaterial({
@@ -34,15 +39,15 @@ export function Room(props) {
   });
 
   const compMaterial = new THREE.MeshStandardMaterial({
-    color: "#fff",
+    color: isLightMode ? "#f5f5f5" : "#fff",
   });
 
   const pillowMaterial = new THREE.MeshPhongMaterial({
-    color: "#8338ec",
+    color: isLightMode ? "#132f4c" : "#8338ec", // Azul marinho no claro, roxo no escuro
   });
 
   const chairMaterial = new THREE.MeshPhongMaterial({
-    color: "#000",
+    color: isLightMode ? "#2c3e50" : "#000", // Cinza escuro no claro, preto no escuro
   });
 
   return (

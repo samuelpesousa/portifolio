@@ -37,7 +37,8 @@ const Navbar = () => {
 
             <a href="#contact" className="contact-btn group">
                 <div className="inner">
-                    <span>Entrar em Contato</span>
+                    <span className="btn-text">Entrar em Contato</span>
+                    <span className="btn-text-mobile">Contato</span>
                     <svg 
                         xmlns="http://www.w3.org/2000/svg" 
                         width="18" 
@@ -48,6 +49,7 @@ const Navbar = () => {
                         strokeWidth="2" 
                         strokeLinecap="round" 
                         strokeLinejoin="round"
+                        className="btn-arrow"
                     >
                         <path d="M5 12h14M12 5l7 7-7 7"/>
                     </svg>

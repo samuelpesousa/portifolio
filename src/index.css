@@ -262,13 +262,18 @@ section {
 
       .inner {
         /* Botão azul marinho elegante com gradiente */
-        @apply px-6 py-3 rounded-lg transition-all duration-300 flex items-center gap-2;
+        @apply px-4 md:px-6 py-2 md:py-3 rounded-lg transition-all duration-300 flex items-center gap-2;
         background: var(--button-gradient);
         color: #ffffff;
         box-shadow: var(--shadow-md);
         font-weight: 600;
         letter-spacing: 0.5px;
         border: 1px solid rgba(255, 255, 255, 0.1);
+        font-size: 0.875rem;
+        
+        @media (min-width: 768px) {
+          font-size: 1rem;
+        }
         
         &:hover {
           transform: translateY(-2px) scale(1.02);
@@ -277,22 +282,39 @@ section {
           background: linear-gradient(135deg, #132f4c 0%, #2c5282 100%);
         }
 
-        span {
-          @apply transition-all duration-300;
+        .btn-text {
+          @apply hidden md:inline transition-all duration-300;
           color: #ffffff;
         }
         
-        svg {
-          @apply transition-all duration-300;
+        .btn-text-mobile {
+          @apply inline md:hidden transition-all duration-300;
           color: #ffffff;
         }
         
-        &:hover svg {
+        .btn-arrow {
+          @apply transition-all duration-300;
+          color: #ffffff;
+          width: 16px;
+          height: 16px;
+          
+          @media (min-width: 768px) {
+            width: 18px;
+            height: 18px;
+          }
+        }
+        
+        &:hover .btn-arrow {
           transform: translateX(4px) rotate(-5deg);
         }
         
-        &:hover span {
+        &:hover .btn-text,
+        &:hover .btn-text-mobile {
           letter-spacing: 0.8px;
+        }
+        
+        &:active {
+          transform: translateY(0) scale(0.98);
         }
       }
     }
